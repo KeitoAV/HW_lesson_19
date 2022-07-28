@@ -1,0 +1,127 @@
+GET http://127.0.0.1:10001/users/
+Accept: application/json
+
+###
+
+
+POST http://127.0.0.1:10001/auth/
+Content-Type: application/json
+
+{
+  "username": "oleg",
+  "password": "P@ssw0rd"
+
+}
+
+###
+
+
+GET http://127.0.0.1:10001/movies/
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBvbGluYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY1OTAwMjQ3Mn0.o2ATdCpa2hvTZuG1K_wvQYZLLQXOD4vLdkyd5IT0Kow
+
+
+###
+
+GET http://127.0.0.1:10001/movies/?director_id=12
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBvbGluYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY1OTAwMjQ3Mn0.o2ATdCpa2hvTZuG1K_wvQYZLLQXOD4vLdkyd5IT0Kow
+
+###
+
+GET http://127.0.0.1:10001/movies/?genre_id=4
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBvbGluYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY1ODk0MDQyM30.KwNbJBffpGzaQX_JPBhva54CoYqImgASydeGSafCZ2Q
+
+###
+
+GET http://127.0.0.1:10001/movies/?year=2010
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBvbGluYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY1ODk0MDQyM30.KwNbJBffpGzaQX_JPBhva54CoYqImgASydeGSafCZ2Q
+
+###
+
+GET http://127.0.0.1:10001/directors/
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBvbGluYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY1ODk0MDQyM30.KwNbJBffpGzaQX_JPBhva54CoYqImgASydeGSafCZ2Q
+
+###
+
+GET http://127.0.0.1:10001/directors/1
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBvbGluYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY1ODk0MDQyM30.KwNbJBffpGzaQX_JPBhva54CoYqImgASydeGSafCZ2Q
+
+###
+
+GET http://127.0.0.1:10001/genres/
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBvbGluYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY1ODk0MDQyM30.KwNbJBffpGzaQX_JPBhva54CoYqImgASydeGSafCZ2Q
+
+###
+
+GET http://127.0.0.1:10001/genres/1
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBvbGluYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY1ODk0MDQyM30.KwNbJBffpGzaQX_JPBhva54CoYqImgASydeGSafCZ2Q
+
+###
+
+GET http://127.0.0.1:10001/movies/21
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImtlaXRvIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjU5MDAyNjc4fQ.-rkkKKLKK8DQcMp_Aij6b7pbM9O3cTWxc63BuBNxBEc
+
+###
+
+POST http://127.0.0.1:10001/movies/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBvbGluYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY1OTAwMjQ3Mn0.o2ATdCpa2hvTZuG1K_wvQYZLLQXOD4vLdkyd5IT0Kow
+
+{
+  "title": "Гарри Поттер мой кумир!",
+  "trailer": "таким фильмам не нужны трейлеры",
+  "year": 1990,
+  "rating": 10,
+  "description": "10 из 10!"
+}
+
+###
+
+PUT http://127.0.0.1:10001/movies/21
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImtlaXRvIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjU5MDAyNjc4fQ.-rkkKKLKK8DQcMp_Aij6b7pbM9O3cTWxc63BuBNxBEc
+
+{
+  "id": 21,
+  "title": "-------",
+  "trailer": "-----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+PATCH http://127.0.0.1:10001/movies/21
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImtlaXRvIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjU5MDAyNjc4fQ.-rkkKKLKK8DQcMp_Aij6b7pbM9O3cTWxc63BuBNxBEc
+
+{
+  "id": 21,
+  "title": "-------",
+  "trailer": "-----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+DELETE http://127.0.0.1:10001/movies/21
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImtlaXRvIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjU5MDAyNjc4fQ.-rkkKKLKK8DQcMp_Aij6b7pbM9O3cTWxc63BuBNxBEc
